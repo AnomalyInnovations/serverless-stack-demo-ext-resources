@@ -39,11 +39,11 @@ resources:
           - S3Bucket
           - Arn
       Export:
-        Name: ${self:custom.stage}-AttachmentsBucketArn
+        Name: ${self:custom.stage}-ExtAttachmentsBucketArn
 
     AttachmentsBucketName:
       Value:
         Ref: S3Bucket
       Export:
-        Name: ${self:custom.stage}-AttachmentsBucket
+        Name: ${self:custom.stage}-ExtAttachmentsBucket
 
