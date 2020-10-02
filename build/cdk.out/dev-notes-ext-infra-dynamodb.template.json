@@ -1,0 +1,56 @@
+{
+  "Resources": {
+    "TableCD117FA1": {
+      "Type": "AWS::DynamoDB::Table",
+      "Properties": {
+        "KeySchema": [
+          {
+            "AttributeName": "userId",
+            "KeyType": "HASH"
+          },
+          {
+            "AttributeName": "noteId",
+            "KeyType": "RANGE"
+          }
+        ],
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "userId",
+            "AttributeType": "S"
+          },
+          {
+            "AttributeName": "noteId",
+            "AttributeType": "S"
+          }
+        ],
+        "BillingMode": "PAY_PER_REQUEST"
+      },
+      "UpdateReplacePolicy": "Retain",
+      "DeletionPolicy": "Retain",
+      "Metadata": {
+        "aws:cdk:path": "dev-notes-ext-infra-dynamodb/Table/Resource"
+      }
+    }
+  },
+  "Outputs": {
+    "TableName": {
+      "Value": {
+        "Ref": "TableCD117FA1"
+      },
+      "Export": {
+        "Name": "dev-notes-ext-infra-TableName"
+      }
+    },
+    "TableArn": {
+      "Value": {
+        "Fn::GetAtt": [
+          "TableCD117FA1",
+          "Arn"
+        ]
+      },
+      "Export": {
+        "Name": "dev-notes-ext-infra-TableArn"
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "Resources": {
+    "Uploads4F6EB0FD": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "CorsConfiguration": {
+          "CorsRules": [
+            {
+              "AllowedHeaders": [
+                "*"
+              ],
+              "AllowedMethods": [
+                "GET",
+                "PUT",
+                "POST",
+                "DELETE",
+                "HEAD"
+              ],
+              "AllowedOrigins": [
+                "*"
+              ],
+              "MaxAge": 3000
+            }
+          ]
+        }
+      },
+      "UpdateReplacePolicy": "Retain",
+      "DeletionPolicy": "Retain",
+      "Metadata": {
+        "aws:cdk:path": "dev-notes-ext-infra-s3/Uploads/Resource"
+      }
+    }
+  },
+  "Outputs": {
+    "AttachmentsBucketName": {
+      "Value": {
+        "Ref": "Uploads4F6EB0FD"
+      }
+    },
+    "ExportsOutputFnGetAttUploads4F6EB0FDArn5513CBEA": {
+      "Value": {
+        "Fn::GetAtt": [
+          "Uploads4F6EB0FD",
+          "Arn"
+        ]
+      },
+      "Export": {
+        "Name": "dev-notes-ext-infra-s3:ExportsOutputFnGetAttUploads4F6EB0FDArn5513CBEA"
+      }
+    }
+  }
+}

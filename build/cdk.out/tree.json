@@ -1,0 +1,366 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree"
+      },
+      "dev-notes-ext-infra-dynamodb": {
+        "id": "dev-notes-ext-infra-dynamodb",
+        "path": "dev-notes-ext-infra-dynamodb",
+        "children": {
+          "Table": {
+            "id": "Table",
+            "path": "dev-notes-ext-infra-dynamodb/Table",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "dev-notes-ext-infra-dynamodb/Table/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::DynamoDB::Table",
+                  "aws:cdk:cloudformation:props": {
+                    "keySchema": [
+                      {
+                        "attributeName": "userId",
+                        "keyType": "HASH"
+                      },
+                      {
+                        "attributeName": "noteId",
+                        "keyType": "RANGE"
+                      }
+                    ],
+                    "attributeDefinitions": [
+                      {
+                        "attributeName": "userId",
+                        "attributeType": "S"
+                      },
+                      {
+                        "attributeName": "noteId",
+                        "attributeType": "S"
+                      }
+                    ],
+                    "billingMode": "PAY_PER_REQUEST"
+                  }
+                }
+              },
+              "ScalingRole": {
+                "id": "ScalingRole",
+                "path": "dev-notes-ext-infra-dynamodb/Table/ScalingRole"
+              }
+            }
+          },
+          "TableName": {
+            "id": "TableName",
+            "path": "dev-notes-ext-infra-dynamodb/TableName"
+          },
+          "TableArn": {
+            "id": "TableArn",
+            "path": "dev-notes-ext-infra-dynamodb/TableArn"
+          }
+        }
+      },
+      "dev-notes-ext-infra-s3": {
+        "id": "dev-notes-ext-infra-s3",
+        "path": "dev-notes-ext-infra-s3",
+        "children": {
+          "Uploads": {
+            "id": "Uploads",
+            "path": "dev-notes-ext-infra-s3/Uploads",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "dev-notes-ext-infra-s3/Uploads/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                  "aws:cdk:cloudformation:props": {
+                    "corsConfiguration": {
+                      "corsRules": [
+                        {
+                          "maxAge": 3000,
+                          "allowedHeaders": [
+                            "*"
+                          ],
+                          "allowedMethods": [
+                            "GET",
+                            "PUT",
+                            "POST",
+                            "DELETE",
+                            "HEAD"
+                          ],
+                          "allowedOrigins": [
+                            "*"
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "Notifications": {
+                "id": "Notifications",
+                "path": "dev-notes-ext-infra-s3/Uploads/Notifications"
+              }
+            }
+          },
+          "AttachmentsBucketName": {
+            "id": "AttachmentsBucketName",
+            "path": "dev-notes-ext-infra-s3/AttachmentsBucketName"
+          },
+          "Exports": {
+            "id": "Exports",
+            "path": "dev-notes-ext-infra-s3/Exports",
+            "children": {
+              "Output{\"Fn::GetAtt\":[\"Uploads4F6EB0FD\",\"Arn\"]}": {
+                "id": "Output{\"Fn::GetAtt\":[\"Uploads4F6EB0FD\",\"Arn\"]}",
+                "path": "dev-notes-ext-infra-s3/Exports/Output{\"Fn::GetAtt\":[\"Uploads4F6EB0FD\",\"Arn\"]}"
+              }
+            }
+          }
+        }
+      },
+      "dev-notes-ext-infra-cognito": {
+        "id": "dev-notes-ext-infra-cognito",
+        "path": "dev-notes-ext-infra-cognito",
+        "children": {
+          "UserPool": {
+            "id": "UserPool",
+            "path": "dev-notes-ext-infra-cognito/UserPool",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "dev-notes-ext-infra-cognito/UserPool/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Cognito::UserPool",
+                  "aws:cdk:cloudformation:props": {
+                    "accountRecoverySetting": {
+                      "recoveryMechanisms": [
+                        {
+                          "name": "verified_phone_number",
+                          "priority": 1
+                        },
+                        {
+                          "name": "verified_email",
+                          "priority": 2
+                        }
+                      ]
+                    },
+                    "adminCreateUserConfig": {
+                      "allowAdminCreateUserOnly": false
+                    },
+                    "autoVerifiedAttributes": [
+                      "email"
+                    ],
+                    "emailVerificationMessage": "The verification code to your new account is {####}",
+                    "emailVerificationSubject": "Verify your new account",
+                    "smsVerificationMessage": "The verification code to your new account is {####}",
+                    "usernameAttributes": [
+                      "email"
+                    ],
+                    "verificationMessageTemplate": {
+                      "defaultEmailOption": "CONFIRM_WITH_CODE",
+                      "emailMessage": "The verification code to your new account is {####}",
+                      "emailSubject": "Verify your new account",
+                      "smsMessage": "The verification code to your new account is {####}"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "UserPoolClient": {
+            "id": "UserPoolClient",
+            "path": "dev-notes-ext-infra-cognito/UserPoolClient",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "dev-notes-ext-infra-cognito/UserPoolClient/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Cognito::UserPoolClient",
+                  "aws:cdk:cloudformation:props": {
+                    "userPoolId": {
+                      "Ref": "UserPool6BA7E5F2"
+                    },
+                    "allowedOAuthFlows": [
+                      "implicit",
+                      "code"
+                    ],
+                    "allowedOAuthFlowsUserPoolClient": true,
+                    "allowedOAuthScopes": [
+                      "profile",
+                      "phone",
+                      "email",
+                      "openid",
+                      "aws.cognito.signin.user.admin"
+                    ],
+                    "callbackUrLs": [
+                      "https://example.com"
+                    ],
+                    "generateSecret": false,
+                    "supportedIdentityProviders": [
+                      "COGNITO"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "IdentityPool": {
+            "id": "IdentityPool",
+            "path": "dev-notes-ext-infra-cognito/IdentityPool",
+            "attributes": {
+              "aws:cdk:cloudformation:type": "AWS::Cognito::IdentityPool",
+              "aws:cdk:cloudformation:props": {
+                "allowUnauthenticatedIdentities": false,
+                "cognitoIdentityProviders": [
+                  {
+                    "clientId": {
+                      "Ref": "UserPoolClient2F5918F7"
+                    },
+                    "providerName": {
+                      "Fn::GetAtt": [
+                        "UserPool6BA7E5F2",
+                        "ProviderName"
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "CognitoAuthRole": {
+            "id": "CognitoAuthRole",
+            "path": "dev-notes-ext-infra-cognito/CognitoAuthRole",
+            "children": {
+              "cognitoDefaultAuthenticatedRole": {
+                "id": "cognitoDefaultAuthenticatedRole",
+                "path": "dev-notes-ext-infra-cognito/CognitoAuthRole/cognitoDefaultAuthenticatedRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "dev-notes-ext-infra-cognito/CognitoAuthRole/cognitoDefaultAuthenticatedRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRoleWithWebIdentity",
+                              "Condition": {
+                                "StringEquals": {
+                                  "cognito-identity.amazonaws.com:aud": {
+                                    "Ref": "IdentityPool"
+                                  }
+                                },
+                                "ForAnyValue:StringLike": {
+                                  "cognito-identity.amazonaws.com:amr": "authenticated"
+                                }
+                              },
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Federated": "cognito-identity.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        }
+                      }
+                    }
+                  },
+                  "DefaultPolicy": {
+                    "id": "DefaultPolicy",
+                    "path": "dev-notes-ext-infra-cognito/CognitoAuthRole/cognitoDefaultAuthenticatedRole/DefaultPolicy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "dev-notes-ext-infra-cognito/CognitoAuthRole/cognitoDefaultAuthenticatedRole/DefaultPolicy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": [
+                                    "mobileanalytics:PutEvents",
+                                    "cognito-sync:*",
+                                    "cognito-identity:*"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": "*"
+                                },
+                                {
+                                  "Action": "s3:*",
+                                  "Effect": "Allow",
+                                  "Resource": {
+                                    "Fn::Join": [
+                                      "",
+                                      [
+                                        {
+                                          "Fn::ImportValue": "dev-notes-ext-infra-s3:ExportsOutputFnGetAttUploads4F6EB0FDArn5513CBEA"
+                                        },
+                                        "/private/${cognito-identity.amazonaws.com:sub}/*"
+                                      ]
+                                    ]
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "CognitoAuthRolecognitoDefaultAuthenticatedRoleDefaultPolicyFAF21ADB",
+                            "roles": [
+                              {
+                                "Ref": "CognitoAuthRolecognitoDefaultAuthenticatedRole7D725957"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "identityPoolRoleAttachment": {
+                "id": "identityPoolRoleAttachment",
+                "path": "dev-notes-ext-infra-cognito/CognitoAuthRole/identityPoolRoleAttachment",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Cognito::IdentityPoolRoleAttachment",
+                  "aws:cdk:cloudformation:props": {
+                    "identityPoolId": {
+                      "Ref": "IdentityPool"
+                    },
+                    "roles": {
+                      "authenticated": {
+                        "Fn::GetAtt": [
+                          "CognitoAuthRolecognitoDefaultAuthenticatedRole7D725957",
+                          "Arn"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "UserPoolId": {
+            "id": "UserPoolId",
+            "path": "dev-notes-ext-infra-cognito/UserPoolId"
+          },
+          "UserPoolClientId": {
+            "id": "UserPoolClientId",
+            "path": "dev-notes-ext-infra-cognito/UserPoolClientId"
+          },
+          "IdentityPoolId": {
+            "id": "IdentityPoolId",
+            "path": "dev-notes-ext-infra-cognito/IdentityPoolId"
+          },
+          "AuthenticatedRoleName": {
+            "id": "AuthenticatedRoleName",
+            "path": "dev-notes-ext-infra-cognito/AuthenticatedRoleName"
+          }
+        }
+      }
+    }
+  }
+}

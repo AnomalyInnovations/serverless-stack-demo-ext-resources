@@ -1,0 +1,353 @@
+{
+  "version": "5.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "dev-notes-ext-infra-dynamodb": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://232771856781/us-east-1",
+      "properties": {
+        "templateFile": "dev-notes-ext-infra-dynamodb.template.json"
+      },
+      "metadata": {
+        "/dev-notes-ext-infra-dynamodb/Table/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TableCD117FA1",
+            "trace": [
+              "new Table (/Users/frank/Sites/ServerlessStackDemoExtResources/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:895:18)",
+              "new DynamoDBStack (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/DynamoDBStack.js:11:19)",
+              "Object.main [as default] (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/index.js:7:3)",
+              "Object.<anonymous> (/Users/frank/Sites/ServerlessStackDemoExtResources/build/run.js:41:16)",
+              "Module._compile (internal/modules/cjs/loader.js:1236:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1257:10)",
+              "Module.load (internal/modules/cjs/loader.js:1085:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:950:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/dev-notes-ext-infra-dynamodb/TableName": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TableName",
+            "trace": [
+              "new DynamoDBStack (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/DynamoDBStack.js:18:5)",
+              "Object.main [as default] (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/index.js:7:3)",
+              "Object.<anonymous> (/Users/frank/Sites/ServerlessStackDemoExtResources/build/run.js:41:16)",
+              "Module._compile (internal/modules/cjs/loader.js:1236:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1257:10)",
+              "Module.load (internal/modules/cjs/loader.js:1085:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:950:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/dev-notes-ext-infra-dynamodb/TableArn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TableArn",
+            "trace": [
+              "new DynamoDBStack (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/DynamoDBStack.js:22:5)",
+              "Object.main [as default] (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/index.js:7:3)",
+              "Object.<anonymous> (/Users/frank/Sites/ServerlessStackDemoExtResources/build/run.js:41:16)",
+              "Module._compile (internal/modules/cjs/loader.js:1236:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1257:10)",
+              "Module.load (internal/modules/cjs/loader.js:1085:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:950:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ]
+      }
+    },
+    "dev-notes-ext-infra-s3": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://232771856781/us-east-1",
+      "properties": {
+        "templateFile": "dev-notes-ext-infra-s3.template.json"
+      },
+      "metadata": {
+        "/dev-notes-ext-infra-s3/Uploads/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Uploads4F6EB0FD",
+            "trace": [
+              "new Bucket (/Users/frank/Sites/ServerlessStackDemoExtResources/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:1206:22)",
+              "new S3Stack (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/S3Stack.js:12:19)",
+              "Object.main [as default] (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/index.js:9:14)",
+              "Object.<anonymous> (/Users/frank/Sites/ServerlessStackDemoExtResources/build/run.js:41:16)",
+              "Module._compile (internal/modules/cjs/loader.js:1236:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1257:10)",
+              "Module.load (internal/modules/cjs/loader.js:1085:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:950:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/dev-notes-ext-infra-s3/AttachmentsBucketName": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AttachmentsBucketName",
+            "trace": [
+              "new S3Stack (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/S3Stack.js:24:5)",
+              "Object.main [as default] (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/index.js:9:14)",
+              "Object.<anonymous> (/Users/frank/Sites/ServerlessStackDemoExtResources/build/run.js:41:16)",
+              "Module._compile (internal/modules/cjs/loader.js:1236:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1257:10)",
+              "Module.load (internal/modules/cjs/loader.js:1085:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:950:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/dev-notes-ext-infra-s3/Exports/Output{\"Fn::GetAtt\":[\"Uploads4F6EB0FD\",\"Arn\"]}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputFnGetAttUploads4F6EB0FDArn5513CBEA",
+            "trace": [
+              "createImportValue (/Users/frank/Sites/ServerlessStackDemoExtResources/node_modules/@aws-cdk/core/lib/private/refs.ts:185:5)",
+              "resolveValue (/Users/frank/Sites/ServerlessStackDemoExtResources/node_modules/@aws-cdk/core/lib/private/refs.ts:104:10)",
+              "Object.resolveReferences (/Users/frank/Sites/ServerlessStackDemoExtResources/node_modules/@aws-cdk/core/lib/private/refs.ts:31:24)",
+              "Object.prepareApp (/Users/frank/Sites/ServerlessStackDemoExtResources/node_modules/@aws-cdk/core/lib/private/prepare-app.ts:36:5)",
+              "Object.synthesize (/Users/frank/Sites/ServerlessStackDemoExtResources/node_modules/@aws-cdk/core/lib/private/synthesis.ts:21:3)",
+              "App.synth (/Users/frank/Sites/ServerlessStackDemoExtResources/node_modules/@aws-cdk/core/lib/stage.ts:175:23)",
+              "App.synth (/Users/frank/Sites/ServerlessStackDemoExtResources/node_modules/@serverless-stack/resources/src/App.ts:72:18)",
+              "process.<anonymous> (/Users/frank/Sites/ServerlessStackDemoExtResources/node_modules/@aws-cdk/core/lib/app.ts:112:45)",
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)",
+              "process.emit (/Users/frank/Sites/ServerlessStackDemoExtResources/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ]
+      }
+    },
+    "dev-notes-ext-infra-cognito": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://232771856781/us-east-1",
+      "properties": {
+        "templateFile": "dev-notes-ext-infra-cognito.template.json"
+      },
+      "dependencies": [
+        "dev-notes-ext-infra-s3"
+      ],
+      "metadata": {
+        "/dev-notes-ext-infra-cognito/UserPool/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UserPool6BA7E5F2",
+            "trace": [
+              "new UserPool (/Users/frank/Sites/ServerlessStackDemoExtResources/node_modules/@aws-cdk/aws-cognito/lib/user-pool.ts:718:22)",
+              "new CognitoStack (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/CognitoStack.js:15:22)",
+              "Object.main [as default] (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/index.js:11:3)",
+              "Object.<anonymous> (/Users/frank/Sites/ServerlessStackDemoExtResources/build/run.js:41:16)",
+              "Module._compile (internal/modules/cjs/loader.js:1236:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1257:10)",
+              "Module.load (internal/modules/cjs/loader.js:1085:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:950:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/dev-notes-ext-infra-cognito/UserPoolClient/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UserPoolClient2F5918F7",
+            "trace": [
+              "new UserPoolClient (/Users/frank/Sites/ServerlessStackDemoExtResources/node_modules/@aws-cdk/aws-cognito/lib/user-pool-client.ts:310:22)",
+              "new CognitoStack (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/CognitoStack.js:21:28)",
+              "Object.main [as default] (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/index.js:11:3)",
+              "Object.<anonymous> (/Users/frank/Sites/ServerlessStackDemoExtResources/build/run.js:41:16)",
+              "Module._compile (internal/modules/cjs/loader.js:1236:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1257:10)",
+              "Module.load (internal/modules/cjs/loader.js:1085:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:950:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/dev-notes-ext-infra-cognito/IdentityPool": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IdentityPool",
+            "trace": [
+              "new CognitoStack (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/CognitoStack.js:27:26)",
+              "Object.main [as default] (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/index.js:11:3)",
+              "Object.<anonymous> (/Users/frank/Sites/ServerlessStackDemoExtResources/build/run.js:41:16)",
+              "Module._compile (internal/modules/cjs/loader.js:1236:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1257:10)",
+              "Module.load (internal/modules/cjs/loader.js:1085:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:950:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/dev-notes-ext-infra-cognito/CognitoAuthRole/cognitoDefaultAuthenticatedRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CognitoAuthRolecognitoDefaultAuthenticatedRole7D725957",
+            "trace": [
+              "new Role (/Users/frank/Sites/ServerlessStackDemoExtResources/node_modules/@aws-cdk/aws-iam/lib/role.ts:326:18)",
+              "new CognitoAuthRole (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/CognitoAuthRole.js:15:17)",
+              "new CognitoStack (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/CognitoStack.js:37:31)",
+              "Object.main [as default] (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/index.js:11:3)",
+              "Object.<anonymous> (/Users/frank/Sites/ServerlessStackDemoExtResources/build/run.js:41:16)",
+              "Module._compile (internal/modules/cjs/loader.js:1236:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1257:10)",
+              "Module.load (internal/modules/cjs/loader.js:1085:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:950:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/dev-notes-ext-infra-cognito/CognitoAuthRole/cognitoDefaultAuthenticatedRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CognitoAuthRolecognitoDefaultAuthenticatedRoleDefaultPolicyFAF21ADB",
+            "trace": [
+              "new Policy (/Users/frank/Sites/ServerlessStackDemoExtResources/node_modules/@aws-cdk/aws-iam/lib/policy.ts:140:22)",
+              "Role.addToPrincipalPolicy (/Users/frank/Sites/ServerlessStackDemoExtResources/node_modules/@aws-cdk/aws-iam/lib/role.ts:367:28)",
+              "Role.addToPolicy (/Users/frank/Sites/ServerlessStackDemoExtResources/node_modules/@aws-cdk/aws-iam/lib/role.ts:375:17)",
+              "new CognitoAuthRole (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/CognitoAuthRole.js:29:15)",
+              "new CognitoStack (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/CognitoStack.js:37:31)",
+              "Object.main [as default] (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/index.js:11:3)",
+              "Object.<anonymous> (/Users/frank/Sites/ServerlessStackDemoExtResources/build/run.js:41:16)",
+              "Module._compile (internal/modules/cjs/loader.js:1236:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1257:10)",
+              "Module.load (internal/modules/cjs/loader.js:1085:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:950:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/dev-notes-ext-infra-cognito/CognitoAuthRole/identityPoolRoleAttachment": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CognitoAuthRoleidentityPoolRoleAttachmentE5EE99EB",
+            "trace": [
+              "new CognitoAuthRole (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/CognitoAuthRole.js:41:5)",
+              "new CognitoStack (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/CognitoStack.js:37:31)",
+              "Object.main [as default] (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/index.js:11:3)",
+              "Object.<anonymous> (/Users/frank/Sites/ServerlessStackDemoExtResources/build/run.js:41:16)",
+              "Module._compile (internal/modules/cjs/loader.js:1236:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1257:10)",
+              "Module.load (internal/modules/cjs/loader.js:1085:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:950:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/dev-notes-ext-infra-cognito/UserPoolId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UserPoolId",
+            "trace": [
+              "new CognitoStack (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/CognitoStack.js:52:5)",
+              "Object.main [as default] (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/index.js:11:3)",
+              "Object.<anonymous> (/Users/frank/Sites/ServerlessStackDemoExtResources/build/run.js:41:16)",
+              "Module._compile (internal/modules/cjs/loader.js:1236:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1257:10)",
+              "Module.load (internal/modules/cjs/loader.js:1085:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:950:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/dev-notes-ext-infra-cognito/UserPoolClientId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UserPoolClientId",
+            "trace": [
+              "new CognitoStack (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/CognitoStack.js:55:5)",
+              "Object.main [as default] (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/index.js:11:3)",
+              "Object.<anonymous> (/Users/frank/Sites/ServerlessStackDemoExtResources/build/run.js:41:16)",
+              "Module._compile (internal/modules/cjs/loader.js:1236:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1257:10)",
+              "Module.load (internal/modules/cjs/loader.js:1085:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:950:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/dev-notes-ext-infra-cognito/IdentityPoolId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IdentityPoolId",
+            "trace": [
+              "new CognitoStack (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/CognitoStack.js:58:5)",
+              "Object.main [as default] (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/index.js:11:3)",
+              "Object.<anonymous> (/Users/frank/Sites/ServerlessStackDemoExtResources/build/run.js:41:16)",
+              "Module._compile (internal/modules/cjs/loader.js:1236:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1257:10)",
+              "Module.load (internal/modules/cjs/loader.js:1085:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:950:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/dev-notes-ext-infra-cognito/AuthenticatedRoleName": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthenticatedRoleName",
+            "trace": [
+              "new CognitoStack (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/CognitoStack.js:61:5)",
+              "Object.main [as default] (/Users/frank/Sites/ServerlessStackDemoExtResources/lib/index.js:11:3)",
+              "Object.<anonymous> (/Users/frank/Sites/ServerlessStackDemoExtResources/build/run.js:41:16)",
+              "Module._compile (internal/modules/cjs/loader.js:1236:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1257:10)",
+              "Module.load (internal/modules/cjs/loader.js:1085:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:950:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/core": "1.61.0",
+      "@aws-cdk/cx-api": "1.61.0",
+      "@aws-cdk/cloud-assembly-schema": "1.61.0",
+      "@aws-cdk/aws-s3": "1.61.0",
+      "@aws-cdk/aws-events": "1.61.0",
+      "@aws-cdk/aws-iam": "1.61.0",
+      "@aws-cdk/region-info": "1.61.0",
+      "@aws-cdk/aws-kms": "1.61.0",
+      "@aws-cdk/aws-cognito": "1.61.0",
+      "@aws-cdk/custom-resources": "1.61.0",
+      "@aws-cdk/aws-lambda": "1.61.0",
+      "@aws-cdk/aws-applicationautoscaling": "1.61.0",
+      "@aws-cdk/aws-autoscaling-common": "1.61.0",
+      "@aws-cdk/aws-cloudwatch": "1.61.0",
+      "@aws-cdk/aws-codeguruprofiler": "1.61.0",
+      "@aws-cdk/aws-ec2": "1.61.0",
+      "@aws-cdk/aws-ssm": "1.61.0",
+      "@aws-cdk/aws-logs": "1.61.0",
+      "@aws-cdk/aws-s3-assets": "1.61.0",
+      "@aws-cdk/assets": "1.61.0",
+      "@aws-cdk/aws-sqs": "1.61.0",
+      "@aws-cdk/aws-dynamodb": "1.61.0",
+      "jsii-runtime": "node.js/v14.6.0"
+    }
+  }
+}
