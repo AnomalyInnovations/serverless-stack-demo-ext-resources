@@ -2,28 +2,26 @@
 
 [Serverless Stack](https://serverless-stack.com) is a free comprehensive guide to creating full-stack serverless applications. We create a [note taking app](https://demo2.serverless-stack.com) from scratch.
 
-This repo is used in the [Best Practices section](https://serverless-stack.com/chapters/best-practices-for-building-serverless-apps.html) of the guide.
+This repo is used in the [Best Practices section](https://serverless-stack.com/chapters/best-practices-for-building-serverless-apps.html) of the guide. It uses [SST](https://github.com/serverless-stack/serverless-stack) to deploy a [AWS CDK](https://aws.amazon.com/cdk/) app.
 
 #### Usage
-
-To use this repo locally you need to have the [Serverless framework](https://serverless.com) installed.
-
-``` bash
-$ npm install serverless -g
-```
 
 Clone this repo.
 
 ``` bash
-$ git clone https://github.com/AnomalyInnovations/serverless-stack-demo-ext-api
+$ git clone https://github.com/AnomalyInnovations/serverless-stack-demo-ext-resources
 ```
 
-Go to one of the services in the `services/` dir.
-
-And run this to deploy to your AWS account.
+Install the dependencies.
 
 ``` bash
-$ serverless deploy
+$ npm install
+```
+
+And deploy the CDK app using SST to your AWS account.
+
+``` bash
+$ npx sst deploy
 ```
 
 Once you deploy the resources in this repo, head over to [this accompanying repo](https://github.com/AnomalyInnovations/serverless-stack-demo-ext-api) to deploy the API services.
