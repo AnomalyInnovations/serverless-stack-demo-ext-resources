@@ -1,4 +1,4 @@
-# Serverless Stack Extended Backend Resources
+# Serverless Stack Extended Backend Resources [![Seed Status](https://api.seed.run/serverless-stack/serverless-stack-demo-ext-resources/stages/prod/build_badge)](https://console.seed.run/serverless-stack/serverless-stack-demo-ext-resources)
 
 [Serverless Stack](https://serverless-stack.com) is a free comprehensive guide to creating full-stack serverless applications. We create a [note taking app](https://demo2.serverless-stack.com) from scratch.
 
